@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- Bootstrap -->
+
+  <!-- Styles -->
+  <link href="css/Style.css" rel="stylesheet" type="text/css">
+  <!-- Styles -->
+  <title>Survey Form</title>
+</head>
+<body>
+  <nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="https://makaia.org/portfolio/academia-geek/" target="_blank">
+      <img src="https://academiageek.co/wp-content/uploads/2021/03/Logo-AG-2021.png" width="70" height="40" class="d-inline-block align-top" alt="">
+    </a>
+  </nav>
+  <div class="container">
+    <header class="header">
+      <h1 id="title" class="title-center mt-4">Usos de la Tecnología en Tiempos Libres</h1>
+      <p id="description" class="text-center">"El gran motor del cambio es la tecnología". Alvin Toffler</p>
+    </header>
+
+    <form id="survey-form" class="mb-4">
+      <div class="form-group">
+        <label for="name" id="name-label">Nombre</label>
+        <input type="text" id="name" name="name" class="form-control" required placeholder="Ingrese su Nombre">
+      </div>
+
+      <div class="form-group">
+        <label for="email" id="email-label">Email</label>
+        <input type="email" id="email" name="email" class="form-control" required placeholder="Ingrese su Correo Electrónico">
+      </div>
+
+      <div class="form-group">
+        <label for="age" id="number-label">Edad (12 - 45 años)</label>
+        <input type="number" id="number" name="age" min="12" max="45" class="form-control" required placeholder="Ingrese su Edad">
+      </div>
+
+      <div class="form-group">
+        <p>Dispositivo mas usado</p>
+        <select id="dropdown" class="form-control" name="device" required>
+          <option disabled selected value>Selecciona una Opción</option>
+          <option value="0">Smartphone</option>
+          <option value="1">PC</option>
+          <option value="2">Tablet</option>
+          <option value="3">Otro</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <p>Frecuencia en la que usa el Dispositivo</p>
+        <label><input type="radio" name="frequency" value="Frecuentemente" class="mr-2" checked>Con Frecuencia</label>
+        <label><input type="radio" name="frequency" value="Poco-Frecuente" class="mr-2">Poca Frecuencia</label>
+      </div>
+
+      <div class="form-group">
+        <p>Usos que le da al Dispositivo</p>
+        <label><input type="checkbox" name="prefer" value="Social" class="input-checkbox mr-2">Redes Sociales</label>
+        <label><input type="checkbox" name="prefer" value="Mensajes" class="input-checkbox mr-2">Mensajería</label>
+        <label><input type="checkbox" name="prefer" value="Llamada" class="input-checkbox mr-2">Llamadas</label>
+        <label><input type="checkbox" name="prefer" value="Series" class="input-checkbox mr-2">Ver Series</label>
+        <label><input type="checkbox" name="prefer" value="Info" class="input-checkbox mr-2">Consultar Información</label>
+        <label><input type="checkbox" name="prefer" value="Juegos" class="input-checkbox mr-2">Video Juegos</label>
+        <label><input type="checkbox" name="prefer" value="Otros" class="input-checkbox mr-2">Otros</label>
+      </div>
+
+      <div class="form-group">
+        <p>Descripción</p>
+        <textarea class="form-control" id="textarea" rows="3" placeholder="Qué otros usos le da al dispositivo"></textarea>
+      </div>
+
+      <div class="form-group">
+        <button id="submit" class="btn btn-success btn-lg btn-block">Enviar</button>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>
