@@ -3,6 +3,10 @@ body{
   background: #F5F5F5;
 }
 
+*{
+  color:#000000;
+}
+
 h1, h4{
   font-weight: bold;
   margin-top: 20px;
@@ -11,8 +15,7 @@ h1, h4{
 
 .titulo p{
   font-style: italic;
-    font-weight: bold;
-
+  font-weight: bold;
 }
 
 #img-caption{

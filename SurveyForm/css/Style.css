@@ -5,9 +5,18 @@ body{
   color: #ffffff;
 }
 
+*{
+  color:#000000;
+}
+
 .title-center{
   text-align: center;
   font-weight: bold;
+}
+
+
+#title{
+  text-align: center;
 }
 
 .text-center{
