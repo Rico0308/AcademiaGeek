@@ -1,9 +1,9 @@
-
-.navB{
-  background-color: #e3f2fd;
+.banner{
+  width: 80%;
+  height: 65%;
+  align-content: center;
 }
 
-.logo{
-  width: 80px;
-  height: 80px;
+.navB{
+  background: #E4E4E7;
 }
