@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- BOOTSTRAP -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <!-- BOOTSTRAP -->
+  <!-- STYLE -->
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <!-- STYLE -->
+  <!-- AWESOME FONT -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+  integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <!-- AWESOME FONT -->
+  <title>Technical Documentation Page</title>
+</head>
+<body>
+  <main id="main-doc">
+    <nav id="navbar">
+      <div class="side-navbar active-nav d-flex justify-content-between flex-wrap flex-column" id="sidebar">
+        <ul class="nav flex-column text-white w-100">
+          <header>
+            <a href="https://i3wm.org/docs/userguide.html" class="nav-link h3 text-center text-white my-2" target="_blank">
+              i3 WM
+            </a>
+          </header>
+
+          <li class="nav-link">
+            <a href="#¿Qué_es_i3_WM?" class="smooth-scroll"><span class="mx-2">¿Qué es i3 WM?</span></a>
+          </li>
+          <li class="nav-link">
+            <a href="#Abrir_Terminales" class="smooth-scroll"><span class="mx-2">Abrir Terminales</span></a>
+          </li>
+          <li class="nav-link">
+            <a href="#Cambiar_el_Focus_en_las_Terminales" class="smooth-scroll"><span class="mx-2">Cambiar el Focus en las Terminales</span></a>
+          </li>
+          <li class="nav-link">
+            <a href="#Cambiar_el_Layout_del_Contenedor" class="smooth-scroll"><span class="mx-2">Cambiar el Layout del Contenedor</span></a>
+          </li>
+          <li class="nav-link">
+            <a href="#Modo_Full_Ventana" class="smooth-scroll"><span class="mx-2">Modo Full Ventana</span></a>
+          </li>
+          <li class="nav-link">
+            <a href="#Cerrar_Ventanas" class="smooth-scroll"><span class="mx-2">Cerrar Ventanas</span></a>
+          </li>
+          <li class="nav-link">
+            <a href="#Reiniciar_i3" class="smooth-scroll"><span class="mx-2">Reiniciar i3</span></a>
+          </li>
+          <li class="nav-link">
+            <a href="#Modo_Flotante" class="smooth-scroll"><span class="mx-2">Modo Flotante</span></a>
+          </li>
+          <li class="nav-link">
+            <a href="#Archivo_Configuración_i3" class="smooth-scroll"><span class="mx-2">Archivo Configuración i3</span></a>
+          </li>
+          <li class="nav-link">
+            <a href="#Full_Documentacion" class="smooth-scroll"><span class="mx-2">Full Documentacion</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
+    <div class="p-1 my-container active-cont">
+      <section class="main-section" id="¿Qué_es_i3_WM?">
+        <header>¿Qué es i3 WM?</header>
+        <article>
+          <p>
+            i3 Window Manager es un Administrador de Ventanas de Mosaico, las
+            plataformas de destino son los SO GNU/Linux y BSD, el código es
+            Software Libre y de Código Abierto (FOSS) bajo la licencia BSD. i3
+            está dirigido principalmente a usuario y desarrolladores avanzados,
+            sin embargo cualquier persona puede usarlo al leer la documentación
+            de la página oficial.
+          </p>
+        </article>
+
+      </section>
+      <section class="main-section" id="Abrir_Terminales">
+        <header>Abrir Terminales</header>
+        <article>
+          <p>
+            Una de las operaciones más básicas y habituales en i3 es abrir una
+            o múltiples terminales, la combinación de teclas por defecto al instalar
+            i3 WM para abrir terminales es $mod + Enter, siendo $mod la tecla Alt.
+            Tras presionar esta combinación de teclas, se abrirá la terminal que
+            está estipulada en el archivo de configuración de i3.
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="Cambiar_el_Focus_en_las_Terminales">
+        <header>Cambiar el Focus en las Terminales</header>
+        <article>
+          <p>
+            Al abrir múltiples terminales se requerirá cambiar entre el focus de
+            las mismas, es por ello que la mayoría de usuarios de i3 dejan de
+            depender del mouse y se centran mas en utilizar atajos del teclado.
+            Para cambiar el focus entre ventanas están estipuladas por defecto
+            las siguientes combinaciones:
+          </p>
+          <ul>
+            <li>$mod + k.</li>
+            <li>$mod + l.</li>
+            <li>$mod + alguna de las teclas de dirección.</li>
+          </ul>
+        </article>
+      </section>
+      <section class="main-section" id="Cambiar_el_Layout_del_Contenedor">
+        <header>Cambiar el Layout del Contenedor</header>
+        <article>
+          <p>
+            El Layout de los Contenedores puede variar de diferentes formas según el tipo que seleccionemos, estos son:
+          </p>
+          <ul>
+            <li>Splith/Splitv: Se dimencionan para que las ventanas tengan el
+              mismo espacio, pueden ser de forma Horizontal (Splith) o Vertical (Splitv).</li>
+              <li>Apilado: Solo muestra la ventana enfocada y las demás se encuentran
+                en una lista en la parte superior apiladas de forma vertical.</li>
+                <li>Tabulado: Mismo principio que apilado pero la lista se encuentra
+                  de forma horizontal.</li>
+                </ul>
+              </article>
+            </section>
+            <section class="main-section" id="Modo_Full_Ventana">
+              <header>Modo Full Ventana</header>
+              <article>
+                <p>
+                  Para mostrar una ventada en modo Pantalla Completo basta únicamente
+                  con presionar $mod + f, en dado caso que desee salir del modo
+                  pantalla completa deberá presionar nuevamente $mod + f.
+                </p>
+              </article>
+            </section>
+            <section class="main-section" id="Cerrar_Ventanas">
+              <header>Cerrar Ventanas</header>
+              <article>
+                <p>
+                  Para cerrar ventanas con atajo de teclado puede optar por emplear
+                  la combinación de teclas por defecto que proporciona i3 WM, estas son
+                  $mod + Shift + q.
+                </p>
+              </article>
+            </section>
+            <section class="main-section" id="Reiniciar_i3">
+              <header>Reiniciar i3</header>
+              <article>
+                <p>
+                  Existirán casos en los cuales requiera reiniciar i3 WM por completo
+                  por diferentes razones, entre estas pueden estar los cambios en la configuración
+                  del Administrador de Ventanas, para este caso bastan con presionar
+                  $mod + Shift + r.
+                </p>
+              </article>
+            </section>
+            <section class="main-section" id="Modo_Flotante">
+              <header>Modo Flotante</header>
+              <article>
+                <p>
+                  En ocasiones el usuario requerirá dejar de lado el modo mosaico
+                  para poder manipular a su gusto el tamaño de la ventana, para ello
+                  se emplea el modo Flotante, para alternar entre modo Mosaico a Flotante
+                  deberá presionar $mod + Shift + Espacio.
+                </p>
+              </article>
+            </section>
+            <section class="main-section" id="Archivo_Configuración_i3">
+              <header>Archivo Configuración i3</header>
+              <article>
+                <p>
+                  La diversión y porqué no, aprendizaje de i3 se encuentra en su
+                  archivo de configuración. En este se encuentran los atajos de teclados
+                  por defecto y así mismo, se pueden añadir los que deseemos, qué aplicaciones
+                  iniciar automáticamente, cambiar colores, definir qué aplicaciones
+                  abrir en espacios de trabajos específicos, entre muchas otras cosas mas.
+                  Se debe copiar el archivo de configuración i3 que se encuentra en /etc/i3/config
+                  a ~/.i3/config o a ~/.config/i3/config; seguidamente puede empezar a editar el archivo
+                  con su editor de texto favorito.
+                </p>
+              </article>
+            </section>
+            <section class="main-section" id="Full_Documentacion">
+              <header>Full Documentacion</header>
+              <article>
+                <p>
+                  Para profundizar aún más en la documentación de i3 WM visite <a href="https://i3wm.org/docs/userguide.html">i3 User's Guide</a>.
+                </p>
+              </article>
+            </section>
+            <a href="#" class="scroll-top" title="Ir arriba">
+              <i class="fa fa-angle-up"></i>
+            </a>
+          </div>
+        </main>
+      </body>
+      <!-- JS -->
+
+    <script type="text/javascript">
+    $(window).scroll(function() {
+      if ($(this).scrollTop() > 300) {
+        $('a.scroll-top').fadeIn('slow');
+      } else {
+        $('a.scroll-top').fadeOut('slow');
+      }
+    });
+    $('a.scroll-top').click(function(event) {
+      event.preventDefault();
+      $('html, body').animate({scrollTop: 0}, 100);
+    });
+  </script>
+  <!-- JS -->
+  </html>
