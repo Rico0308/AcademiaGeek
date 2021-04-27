@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,15 +10,14 @@
   integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
   <!-- BOOTSTRAP -->
 
-  <!-- GOOGLE FONTS ICON -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-  rel="stylesheet">
-  <!-- GOOGLE FONTS ICON -->
-
   <!-- AWESOME FONT -->
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
   integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   <!-- AWESOME FONT -->
+
+  <!-- BOOTSTRAP ICON -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+  <!-- BOOTSTRAP ICON -->
 
   <!-- STYLE -->
   <link href="css/Style.css" rel="stylesheet" type="text/css">
@@ -84,7 +83,8 @@
           </div>
         </div>
       </div>
-      <div class="card text-center mt-3 mb-3">
+      <!-- <div class="card text-center mt-3 mb-3"> -->
+      <div class="card mt-3 mb-3">
         <div class="card-header">
           <ul class="nav nav-tabs card-header-tabs" id="tabs-ciclista" role="tablist">
             <li class="nav-item">
@@ -102,44 +102,33 @@
           <div class="tab-content" id="content-tab">
             <div class="tab-pane fade show active" id="registro" role="tabpanel" aria-labelledby="registro-tab">
               <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-                <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                  <span class="material-icons">add</span>
+                <input class="form-control me-2" id="txt_buscar" type="search" placeholder="Buscar" aria-label="Search">
+                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#modalAgregarCiclista">
+                  <i class="bi bi-plus"></i>
                 </button>
               </form>
               <div class="table-responsive">
-                <table class="table table-bordered mt-2">
+                <table class="table table-bordered mt-2 text-center">
                   <thead>
                     <tr>
                       <th scope="col">#</th>
                       <th scope="col">Corredor</th>
                       <th scope="col">Carrera 1</th>
                       <th scope="col">Carrera 2</th>
+                      <th scope="col">Carrera 3</th>
                       <th scope="col">Carrera 4</th>
                       <th scope="col">Carrera 5</th>
                       <th scope="col">Acciones</th>
                     </tr>
                   </thead>
-                  <tbody>
-                    <tr>
-                      <td>1</td>
-                      <td>Diego Gómez</td>
-                      <td>90 min</td>
-                      <td>90 min</td>
-                      <td>90 min</td>
-                      <td>90 min</td>
-                      <td>
-                        <a href="#"><span class="material-icons">remove_red_eye</span></a>
-                      </td>
-                    </tr>
-                  </tbody>
+                  <tbody id="lista-ciclista"></tbody>
                 </table>
               </div>
 
             </div>
             <div class="tab-pane fade show" id="promedio" role="tabpanel" aria-labelledby="promedio-tab">
               <div class="table-responsive">
-                <table class="table table-bordered mt-2">
+                <table class="table table-bordered mt-2 text-center">
                   <thead>
                     <tr>
                       <th scope="col">#</th>
@@ -147,91 +136,105 @@
                       <th scope="col">Promedio</th>
                     </tr>
                   </thead>
-                  <tbody>
-                    <tr>
-                      <td>1</td>
-                      <td>Diego Gómez</td>
-                      <td>90 min</td>
-                    </tr>
-                  </tbody>
+                  <tbody id="lista-promedio"></tbody>
                 </table>
               </div>
             </div>
             <div class="tab-pane fade show" id="tiempos" role="tabpanel" aria-labelledby="tiempos-tab">
-
             </div>
           </div>
         </div>
 
         <!-- Modal -->
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Registro de Tiempo</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-
-              <div class="modal-body">
-                <h5>Datos del Corredor</h5>
-                <div class="row align-items-center">
-                  <div class="col-2">
-                    <label for="name" class="col-form-label">Nombre:</label>
+        <form id="frm-ciclista" class="needs-validation" novalidate>
+          <div class="modal fade" id="modalAgregarCiclista" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel">Registro de Tiempo</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="card">
+                    <div class="card-header">
+                      <h5>Datos del Corredor</h5>
+                    </div>
+                    <div class="card-body">
+                      <div class="col-6 has-validation">
+                        <label for="nombre-ciclista" class="col-form-label">Nombre:</label>
+                        <input type="text" id="nombre-ciclista" name="nombre-ciclista" class="form-control" placeholder="Nombre del Corredor" required>
+                        <div class="invalid-feedback">
+                          Ingrese el Nombre del Corredor.
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="col-10">
-                    <input type="text" id="name" class="form-control" placeholder="Nombre del Corredor">
+                  <hr>
+                  <div class="card">
+                    <div class="card-header">
+                      <h5>Registro de Tiempos</h5>
+                    </div>
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-6 has-validation">
+                          <label for="carrera-1" class="col-form-label">Carrera 1 (en minutos) *:</label>
+                          <input type="number" id="carrera-1" name="carrera-1" class="form-control" placeholder="Tiempo Carrera 1" required min="5" max="10">
+                          <div class="invalid-feedback">
+                            Ingrese tiempo para la Carrera 1.
+                          </div>
+                        </div>
+                        <div class="col-6 has-validation">
+                          <label for="carrera-2" class="col-form-label">Carrera 2 (en minutos) *:</label>
+                          <input type="number" id="carrera-2" name="carrera-2" class="form-control" placeholder="Tiempo Carrera 2" required min="5" max="10">
+                          <div class="invalid-feedback">
+                            Ingrese tiempo para la Carrera 2.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-6 has-validation">
+                          <label for="carrera-3" class="col-form-label">Carrera 3 (en minutos) *:</label>
+                          <input type="number" id="carrera-3" name="carrera-3" class="form-control" placeholder="Tiempo Carrera 3" required min="5" max="10">
+                          <div class="invalid-feedback">
+                            Ingrese tiempo para la Carrera 3.
+                          </div>
+                        </div>
+                        <div class="col-6 has-validation">
+                          <label for="carrera-4" class="col-form-label">Carrera 4 (en minutos) *:</label>
+                          <input type="number" id="carrera-4" name="carrera-4" class="form-control" placeholder="Tiempo Carrera 4" required min="5" max="10">
+                          <div class="invalid-feedback">
+                            Ingrese tiempo para la Carrera 4.
+                          </div>
+                        </div>
+                        <div class="col-6 has-validation">
+                          <label for="carrera-5" class="col-form-label">Carrera 5 (en minutos) *:</label>
+                          <input type="number" id="carrera-5" name="carrera-5" class="form-control" placeholder="Tiempo Carrera 5" required min="5" max="10">
+                          <div class="invalid-feedback">
+                            Ingrese tiempo para la Carrera 5.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <hr>
-                <h5>Registro de Tiempos</h5>
-                <div class="row align-items-center">
-                  <div class="col-5">
-                    <label for="carrera1" class="col-form-label">Carrera 1 (en minutos):</label>
-                  </div>
-                  <div class="col-7 mb-2">
-                    <input type="number" id="carrera1" class="form-control" placeholder="Tiempo Carrera 1" requied>
-                  </div>
-                  <div class="col-5">
-                    <label for="carrera2" class="col-form-label">Carrera 2 (en minutos):</label>
-                  </div>
-                  <div class="col-7 mb-2">
-                    <input type="number" id="carrera2" class="form-control" placeholder="Tiempo Carrera 2" requied>
-                  </div>
-                  <div class="col-5">
-                    <label for="carrera3" class="col-form-label">Carrera 3 (en minutos):</label>
-                  </div>
-                  <div class="col-7 mb-2">
-                    <input type="number" id="carrera3" class="form-control" placeholder="Tiempo Carrera 3" requied>
-                  </div>
-                  <div class="col-5">
-                    <label for="carrera4" class="col-form-label">Carrera 4 (en minutos):</label>
-                  </div>
-                  <div class="col-7 mb-2">
-                    <input type="number" id="carrera4" class="form-control" placeholder="Tiempo Carrera 4" requied>
-                  </div>
-                  <div class="col-5">
-                    <label for="carrera5" class="col-form-label">Carrera 5 (en minutos):</label>
-                  </div>
-                  <div class="col-7 mb-2">
-                    <input type="number" id="carrera5" class="form-control" placeholder="Tiempo Carrera 5" requied>
-                  </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Salir</button>
+                  <button type="submit" class="btn btn-outline-success" id="btn-guardar">Guardar</button>
                 </div>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Salir</button>
-                <button type="button" class="btn btn-outline-success">Guardar</button>
               </div>
             </div>
           </div>
-        </div>
+        </form>
+        <!-- Modal -->
       </div>
     </div>
   </main>
-
+  <!-- Footer -->
   <footer class="justify-content-center align-items-center d-flex mb-2">
     Copyright © 2021 | Medellín - Antioquia, Colombia |<i class="fab fa-github ms-2 me-2"></i>|<i class="fab fa-facebook ms-2 me-2"></i>
     |<i class="fab fa-twitter ms-2 me-2"></i>
   </footer>
+  <!-- Footer -->
 </section>
 </body>
 <!-- JS -->
