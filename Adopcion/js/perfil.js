@@ -15,7 +15,7 @@ window.addEventListener('load', e => {
     perfil.forEach((perf, i) => {
       document.querySelector('#usuario_perfil').innerHTML += `
       <a href="pets.html" role="button"><i class="bi fa-2x bi-arrow-left-circle-fill button_a"></i></a>
-      <img src="../img/perfil.png" alt="Foto Perfil" class="img img-responsive img_perfil mt-3">
+      <img src="./Adopcion//img/perfil.png" alt="Foto Perfil" class="img img-responsive img_perfil mt-3">
       <h4>${perf.nombres} ${perf.apellidos}</h4>
       <h6>Editar Cuenta</h6>
       <div class="form-group me-3 ms-3 mb-3 label-left">
@@ -36,7 +36,7 @@ window.addEventListener('load', e => {
   }else{
     document.querySelector('#usuario_perfil').innerHTML = ""
     document.querySelector('#usuario_perfil').innerHTML += `
-    <img src="../img/perfil.png" alt="Foto Perfil" class="img img-responsive img_perfil mt-3">
+    <img src="./Adopcion//img/perfil.png" alt="Foto Perfil" class="img img-responsive img_perfil mt-3">
     <h4>Nombre</h4>
     <h6>Editar Cuenta</h6>
     <div class="form-group me-3 ms-3 mb-3 label-left">
@@ -60,7 +60,7 @@ window.addEventListener('load', e => {
 document.querySelector("#usuario_perfil").addEventListener('submit', e => {
   let perfil = new Perfil();
   let arra_perfil = [];
-  perfil.img = "../img/user.jpg";
+  perfil.img = "./Adopcion//img/user.jpg";
   perfil.nombres = document.querySelector("#name").value;
   perfil.apellidos = document.querySelector("#last-name").value;
   perfil.correo = document.querySelector("#email").value;
