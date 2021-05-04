@@ -247,25 +247,25 @@ mascotas = [
 
 mensajes = [
   {
-    img: "./Adopcion/img/avatar1.png",
+    img: "/Adopcion/img/avatar1.png",
     nombre: "Josefina Torres",
     hora: "5:00 PM",
     mensaje: "Buenas tardes, me gustaría adoptar al perrito Loky"
   },
   {
-    img: "./Adopcion/img/avatar2.png",
+    img: "/Adopcion/img/avatar2.png",
     nombre: "Martín Gómez",
     hora: "11:00 AM",
     mensaje: "Buenas días, estoy interesado en adoptar a la gatita Pelusin"
   },
   {
-    img: "./Adopcion/img/avatar3.png",
+    img: "/Adopcion/img/avatar3.png",
     nombre: "María Martínez",
     hora: "2:00 PM",
     mensaje: "Buenas tardes, estoy muy interesada en adoptar al gatito Copito"
   },
   {
-    img: "./Adopcion/img/avatar4.png",
+    img: "/Adopcion/img/avatar4.png",
     nombre: "Jonás Pérez",
     hora: "9:00 AM",
     mensaje: "Buenos días, me gustaría adoptar al perrito Bob"
