@@ -12,14 +12,14 @@ mascotas = [
     direccion: "6352 Kunde Keys Suite 566 - Rio Rancho, ID / 10326",
     historia: "Tony es un perro muy tierno y juguetón, le encantan los niños, es educado, fue rescatado de la calle, la misión es encontrarle una familia que lo quiera.",
     sexo: "Macho",
-    img_sexo: "/Adopcion/img/male.png",
+    img_sexo: "./img/male.png",
     personalidad: {
       primera: "Tierno",
-      img_1: "/Adopcion/img/tierno.png",
+      img_1: "./img/tierno.png",
       segunda: "Juguetón",
-      img_2: "/Adopcion/img/jugueton.png",
+      img_2: "./img/jugueton.png",
       tercera: "Inquieto",
-      img_3: "/Adopcion/img/inquieto.png"
+      img_3: "./img/inquieto.png"
     },
     persona_cargo: "Juan Perez"
   },
