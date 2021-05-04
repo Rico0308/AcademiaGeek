@@ -15,11 +15,11 @@ mascotas = [
     img_sexo: "../img/male.png",
     personalidad: {
       primera: "Tierno",
-      img_1: "../img/tierno.png",
+      img_1: "./img/tierno.png",
       segunda: "Juguetón",
-      img_2: "../img/jugueton.png",
+      img_2: "./img/jugueton.png",
       tercera: "Inquieto",
-      img_3: "../img/inquieto.png"
+      img_3: "./img/inquieto.png"
     },
     persona_cargo: "Juan Perez"
   },
