@@ -259,13 +259,13 @@ mensajes = [
     mensaje: "Buenas días, estoy interesado en adoptar a la gatita Pelusin"
   },
   {
-    img: "../img/avatar3.png",
+    img: "./img/avatar3.png",
     nombre: "María Martínez",
     hora: "2:00 PM",
     mensaje: "Buenas tardes, estoy muy interesada en adoptar al gatito Copito"
   },
   {
-    img: "../img/avatar4.png",
+    img: "./img/avatar4.png",
     nombre: "Jonás Pérez",
     hora: "9:00 AM",
     mensaje: "Buenos días, me gustaría adoptar al perrito Bob"
