@@ -15,7 +15,7 @@ mascotas = [
     img_sexo: "/Adopcion/img/male.png",
     personalidad: {
       primera: "Tierno",
-      img_1: "/Adopcion/img/tierno.png",
+      img_1: "https://images.unsplash.com/photo-1568572933382-74d440642117?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=675&q=80",
       segunda: "Juguetón",
       img_2: "/Adopcion/img/jugueton.png",
       tercera: "Inquieto",
